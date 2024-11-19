@@ -145,20 +145,18 @@ const TeamsTable = () => {
                 </thead>
                 <tbody>
                 {teams.map((team, index) => (
-                    <React.Fragment key={index}>
-                        <tr>
-                            <td>{team.teamName}</td>
-                            <td>{team.standing}</td>
-                            <td>{team.wins}</td>
-                            <td>{team.draws}</td>
-                            <td>{team.losses}</td>
-                            <td>{team.teamRating}</td>
-                            <td>
-                            <button className="action-button" onClick={() => openEditDialog(team)}>Edit</button>
-                            <button className="action-button" onClick={() => handleDelete(team)}>Delete</button>
-                            </td>
-                        </tr>
-                    </React.Fragment>
+                    <tr key={index}>
+                        <td>{team.teamName}</td>
+                        <td>{team.standing}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.teamRating}</td>
+                        <td>
+                        <button className="action-button" onClick={() => openEditDialog(team)}>Edit</button>
+                        <button className="action-button" onClick={() => handleDelete(team)}>Delete</button>
+                        </td>
+                    </tr>
                 ))}
                 </tbody>
             </table>

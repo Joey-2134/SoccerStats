@@ -131,8 +131,7 @@ const PlayersTable = () => {
                 </thead>
                 <tbody>
                 {players.map((player, index) => (
-                    <React.Fragment key={index}>
-                        <tr>
+                        <tr key={index}>
                             <td>{player.firstName}</td>
                             <td>{player.lastName}</td>
                             <td>{player.position}</td>
@@ -143,7 +142,6 @@ const PlayersTable = () => {
                                 <button className="action-button" onClick={() => handleDelete(player)}>Delete</button>
                             </td>
                         </tr>
-                    </React.Fragment>
                 ))}
                 </tbody>
             </table>

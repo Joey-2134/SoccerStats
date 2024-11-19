@@ -135,15 +135,13 @@ const LeagueTable = () => {
                 </thead>
                 <tbody>
                     {leagues.map((league, index) => (
-                        <React.Fragment key={index}>
-                            <tr>
-                                <td>{league.name}</td>
-                                <td>
+                        <tr key={index}>
+                            <td>{league.name}</td>
+                            <td>
                                 <button className="action-button" onClick={() => openEditDialog(league)}>Edit</button>
                                 <button className="action-button" onClick={() => handleDelete(league)}>Delete</button>
                             </td>
-                            </tr>
-                        </React.Fragment>
+                        </tr>
                     ))}
                 </tbody>
             </table>

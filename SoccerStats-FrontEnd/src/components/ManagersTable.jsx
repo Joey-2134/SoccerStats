@@ -132,8 +132,7 @@ const ManagersTable = () => {
                 </thead>
                 <tbody>
                 {managers.map((manager, index) => (
-                    <React.Fragment key={index}>
-                        <tr>
+                        <tr key={index}>
                             <td>{manager.firstName}</td>
                             <td>{manager.lastName}</td>
                             <td>{manager.nationality}</td>
@@ -143,7 +142,6 @@ const ManagersTable = () => {
                                 <button className="action-button" onClick={() => handleDelete(manager)}>Delete</button>
                             </td>
                         </tr>
-                    </React.Fragment>
                 ))}
                 </tbody>
             </table>
